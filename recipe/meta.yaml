@@ -1,4 +1,4 @@
-{% set version = '1.42' %}
+{% set version = "1.44" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,11 +9,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/verification_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/verification/verification_{{ version }}.tar.gz
-  sha256: 3c2adb4b924fe09258f35719d0be8010a1c305f15d304813a9eaa5cacedbb85d
+  sha256: 140ea006b98da0e9ac64231ff8a50d0aa878d3a7ad65c95d2fc548118506ab24
 
 build:
   noarch: generic
-  number: 1005
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -44,8 +44,7 @@ test:
 about:
   home: https://CRAN.R-project.org/package=verification
   license: GPL (>= 2)
-  summary: Utilities for verifying discrete, continuous and probabilistic forecasts, and forecasts
-    expressed as parametric distributions are included.
+  summary: Utilities for verifying discrete, continuous and probabilistic forecasts, and forecasts expressed as parametric distributions are included.
   license_family: GPL3
   license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
 
